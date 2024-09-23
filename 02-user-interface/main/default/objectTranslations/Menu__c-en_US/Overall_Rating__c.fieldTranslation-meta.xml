@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Overall Rating --></label>
+    <name>Overall_Rating__c</name>
+    <picklistValues>
+        <masterLabel>1 - Awful/Inedible</masterLabel>
+        <translation><!-- 1 - Awful/Inedible --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2 - Passable/McDonalds Adjacent</masterLabel>
+        <translation><!-- 2 - Passable/McDonalds Adjacent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3 - OK/Airport Chain Restaurant</masterLabel>
+        <translation><!-- 3 - OK/Airport Chain Restaurant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>4 - Good/Nice Family Italian Restaurant</masterLabel>
+        <translation><!-- 4 - Good/Nice Family Italian Restaurant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>5 - Very Good/1 Michelin Star</masterLabel>
+        <translation><!-- 5 - Very Good/1 Michelin Star --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>6 - Excellent/3 Michelin Stars</masterLabel>
+        <translation><!-- 6 - Excellent/3 Michelin Stars --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

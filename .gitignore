@@ -2,3 +2,5 @@
 .sf/config.json
 .sfdx/sfdx-config.json
 .DS_Store
+.sfdx
+.sf

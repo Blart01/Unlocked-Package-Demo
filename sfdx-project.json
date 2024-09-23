@@ -1,12 +1,38 @@
 {
   "packageDirectories": [
     {
-      "path": "force-app",
+      "path": "./01-base-objects-permissions",
+      "package": "BaseObjects",
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "default": false,
+      "versionDescription": "Objects and Permissions relating to Menu rating application"
+    },
+    {
+      "path": "./02-user-interface",
+      "package": "UserInterface",
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "default": false,
+      "versionDescription": "User interface that sits on top of the base objects",
+      "dependencies" : [
+        {
+          "package" : "BaseObjects",
+          "versionNumber" : "0.1.0.LATEST"
+        }
+      ]
+    },
+    {
+      "path": "./unpackaged",
       "default": true
     }
   ],
   "name": "Unlocked Package Demo - Object Structure",
-  "namespace": "",
+  "namespace": "UnlPackageTest",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "61.0"
+  "sourceApiVersion": "61.0",
+  "packageAliases": {
+    "BaseObjects": "0HoWU0000000Gw10AE",
+    "UserInterface": "0HoWU0000000Gxd0AE"
+  }
 }

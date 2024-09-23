@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rating__c</fullName>
+    <label>Rating</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 - Hair/Rat/Glass in Pasta</fullName>
+                <default>false</default>
+                <label>1 - Hair/Rat/Glass in Pasta</label>
+            </value>
+            <value>
+                <fullName>2 - Bad</fullName>
+                <default>false</default>
+                <label>2 - Bad</label>
+            </value>
+            <value>
+                <fullName>3 - Middle of the Road</fullName>
+                <default>false</default>
+                <label>3 - Middle of the Road</label>
+            </value>
+            <value>
+                <fullName>4 - Pretty Nice</fullName>
+                <default>false</default>
+                <label>4 - Pretty Nice</label>
+            </value>
+            <value>
+                <fullName>5 - Very Nice</fullName>
+                <default>false</default>
+                <label>5 - Very Nice</label>
+            </value>
+            <value>
+                <fullName>6 - Excellent</fullName>
+                <default>false</default>
+                <label>6 - Excellent</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

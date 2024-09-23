@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Overall_Rating__c</fullName>
+    <label>Overall Rating</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 - Awful/Inedible</fullName>
+                <default>false</default>
+                <label>1 - Awful/Inedible</label>
+            </value>
+            <value>
+                <fullName>2 - Passable/McDonalds Adjacent</fullName>
+                <default>false</default>
+                <label>2 - Passable/McDonalds Adjacent</label>
+            </value>
+            <value>
+                <fullName>3 - OK/Airport Chain Restaurant</fullName>
+                <default>false</default>
+                <label>3 - OK/Airport Chain Restaurant</label>
+            </value>
+            <value>
+                <fullName>4 - Good/Nice Family Italian Restaurant</fullName>
+                <default>false</default>
+                <label>4 - Good/Nice Family Italian Restaurant</label>
+            </value>
+            <value>
+                <fullName>5 - Very Good/1 Michelin Star</fullName>
+                <default>false</default>
+                <label>5 - Very Good/1 Michelin Star</label>
+            </value>
+            <value>
+                <fullName>6 - Excellent/3 Michelin Stars</fullName>
+                <default>false</default>
+                <label>6 - Excellent/3 Michelin Stars</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

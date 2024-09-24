@@ -1,0 +1,41 @@
+name: Salesforce Unlocked Package Deployment
+
+on:
+  push:
+    branches:
+      - main  # Trigger action on pushes to the 'main' branch
+    paths:
+      - "force-app/**"  # Trigger on changes in the force-app directory
+
+jobs:
+  deploy:
+    name: Deploy Unlocked Package to Salesforce
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Install Salesforce CLI
+      uses: salesforcecli/sfdx-cli-action@v2.4.0
+
+    - name: Authenticate to Salesforce
+      run: sfdx auth:jwt:grant --clientid ${{ secrets.SALESFORCE_CLIENT_ID }} --username ${{ secrets.SALESFORCE_USERNAME }} --jwtkeyfile ${{ secrets.SALESFORCE_JWT_KEY }} --instanceurl https://login.salesforce.com
+
+    - name: Create new unlocked package version
+      run: |
+        sfdx force:package:version:create -p "Your_Package_Name" -d force-app -k ${{ secrets.PACKAGE_KEY }} --wait 10 --codecoverage --installationkeybypass --versiondescription "Automated unlocked package version creation"
+
+    - name: Install the unlocked package version in the org
+      run: |
+        PACKAGE_VERSION_ID=$(sfdx force:package:version:list --packages "Your_Package_Name" --json | jq -r '.result[0].SubscriberPackageVersionId')
+        sfdx force:package:install --package $PACKAGE_VERSION_ID -k ${{ secrets.PACKAGE_KEY }} -u ${{ secrets.SALESFORCE_USERNAME }} --wait 10 --publishwait 10 --noprompt
+
+    - name: Assign permission sets (optional)
+      run: sfdx force:user:permset:assign -n "Your_PermSet_Name" -u ${{ secrets.SALESFORCE_USERNAME }}
+
+    - name: Run Apex tests (optional)
+      run: sfdx force:apex:test:run -u ${{ secrets.SALESFORCE_USERNAME }} --resultformat human --wait 10
+
+    - name: Logout from Salesforce (optional cleanup)
+      run: sfdx auth:logout -u ${{ secrets.SALESFORCE_USERNAME }}

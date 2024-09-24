@@ -1,3 +1,9 @@
+# Package Installation
+
+To Install Base Objects Package: https://login.salesforce.com/packaging/installPackage.apexp?p0=04tWU00000030l3YAA
+
+To Install User Interface Package: https://login.salesforce.com/packaging/installPackage.apexp?p0=04tWU00000031IvYAI
+
 # Salesforce DX Project: Next Steps
 
 Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
